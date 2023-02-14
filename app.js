@@ -1,5 +1,4 @@
 if ('OTPCredential' in window) {
-  alert('HI BRO');
   window.addEventListener('DOMContentLoaded', (e) => {
     const input = document.querySelector('input[autocomplete="one-time-code"]');
     if (!input) return;
@@ -16,7 +15,8 @@ if ('OTPCredential' in window) {
         signal: ac.signal,
       })
       .then((otp) => {
-        input.value = otp.code;
+        alert(otp.code);
+        // input.value = otp.code;
         alert(otp.code);
         // if (form) form.submit();
       })
