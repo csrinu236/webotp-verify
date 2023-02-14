@@ -20,6 +20,9 @@ if ('OTPCredential' in window) {
       })
       .catch((err) => {
         alert(err.toString());
-      }).finally;
+      })
+      .finally((err) => {
+        alert(err.toString());
+      });
   });
 }
