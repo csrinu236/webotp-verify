@@ -21,7 +21,7 @@ if ('OTPCredential' in window) {
         if (form) form.submit();
       })
       .catch((err) => {
-        console.log(err);
+        alert('Error');
       });
   });
 }
