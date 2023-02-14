@@ -3,12 +3,7 @@ if ('OTPCredential' in window) {
     const input = document.querySelector('input[autocomplete="one-time-code"]');
     if (!input) return;
     const ac = new AbortController();
-    const form = input.closest('form');
-    if (form) {
-      form.addEventListener('submit', (e) => {
-        ac.abort();
-      });
-    }
+
     navigator.credentials
       .get({
         otp: { transport: ['sms'] },
@@ -20,6 +15,9 @@ if ('OTPCredential' in window) {
       })
       .catch((err) => {
         alert('Error');
+      })
+      .finally(() => {
+        ac.abort();
       });
   });
 }
