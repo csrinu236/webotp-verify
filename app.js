@@ -18,6 +18,7 @@ if ('OTPCredential' in window) {
       })
       .finally(() => {
         ac.abort();
+        alert('Error');
       });
   });
 }
