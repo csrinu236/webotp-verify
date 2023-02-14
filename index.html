@@ -8,27 +8,22 @@
     <script defer src="app.js"></script>
   </head>
   <body>
-    <iframe
-      src="https://webotp.verify.netlify.app/iframe"
-      allow="otp-credentials"
-    >
-      <div class="section">
-        <div class="section-center">
-          <form>
-            <h3>OTP:</h3>
-            <input
-              type="number"
-              inputmode="numeric"
-              name="otp"
-              min="1"
-              onKeyPress="if(this.value.length==6) return false"
-              autocomplete="one-time-code"
-              placeholder="Enter 6 digit OTP"
-            />
-            <button class="btn" type="submit">submit</button>
-          </form>
-        </div>
+    <div class="section">
+      <div class="section-center">
+        <form>
+          <h3>OTP:</h3>
+          <input
+            autocomplete="one-time-code"
+            name="otp"
+            min="1"
+            onKeyPress="if(this.value.length==6) return false"
+            autocomplete="one-time-code"
+            placeholder="Enter 6 digit OTP"
+            required
+          />
+          <input type="submit" />
+        </form>
       </div>
-    </iframe>
+    </div>
   </body>
 </html>
