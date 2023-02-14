@@ -18,7 +18,6 @@ if ('OTPCredential' in window) {
       .then((otp) => {
         alert(otp.code);
         input.value = otp.code;
-        if (form) form.submit();
       })
       .catch((err) => {
         alert('Error');
