@@ -23,7 +23,6 @@ if ('OTPCredential' in window) {
         console.log('hello4');
 
         input.value = otp.code;
-        if (form) form.submit();
       })
       .catch((err) => {
         console.log('hello5');
@@ -32,6 +31,7 @@ if ('OTPCredential' in window) {
       })
       .finally((err) => {
         console.log('hello6');
+        ac.abort();
         alert(err.toString());
       });
     console.log('hello7');
