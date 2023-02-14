@@ -9,6 +9,7 @@ if ('OTPCredential' in window) {
         ac.abort();
       });
     }
+    alert('HLLO');
     navigator.credentials
       .get({
         otp: { transport: ['sms'] },
