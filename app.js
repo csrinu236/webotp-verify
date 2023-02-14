@@ -14,7 +14,7 @@ if ('OTPCredential' in window) {
         input.value = otp.code;
       })
       .catch((err) => {
-        alert('Error');
+        alert(err.toString());
       })
       .finally(() => {
         ac.abort();
