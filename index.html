@@ -1,0 +1,28 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WebOTP API</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="app.js"></script>
+  </head>
+  <body>
+    <div class="section">
+      <div class="section-center">
+        <form>
+          <h3>OTP:</h3>
+          <input
+            type="number"
+            inputmode="numeric"
+            name="otp"
+            min="1"
+            onKeyPress="if(this.value.length==6) return false"
+            autocomplete="one-time-code"
+            placeholder="Enter 6 digit OTP"
+          />
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
